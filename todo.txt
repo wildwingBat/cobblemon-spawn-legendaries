@@ -1,0 +1,5 @@
+TO-DO TOMORROW:
+
+Add command to get the custom time values and display that to the user
+Add separate tick counter that runs a Paradox spawn event, so they do not conflict with legendary spawning.
+- command /paradox spawn [here/all], etc
