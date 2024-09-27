@@ -4,16 +4,18 @@
 
 This uses Pokémon Go odds, where every legendary has a 1/20 chance of being shiny. When weather boosted, shiny odds become 1/10. More information about weather boosts below.
 
-THIS MOD IS UNMAINTAINED. I MADE THIS FOR MY BROTHER, AND DO NOT PLAN ON ACTIVELY UPDATING IT. FEEL FREE TO FORK AND MAKE CHANGES!
-
-Note: Cobblemon does not have a model for all legendaries yet! My brother used a datapack that contained all models; you will also need a similar datapack to see the legendaries in-game! I cannot provide that datapack to you.
+_Note: While Cobblemon runs on the Showdown engine and has support for the legendaries battle-wise, Cobblemon does not yet have an in-game model for all legendaries! My brother used a datapack that contained all models; you will also need a similar datapack to see the legendaries in-game! I cannot provide that datapack to you. Without a datapack, the legendaries will spawn as a substitute._
 
 ## Features
 
-- **Legendary Pokémon Spawning**: Adds spawn conditions for legendary Pokémon.
-- **Ultra Beasts**: Includes spawn conditions for Ultra Beasts and Paradox Pokémon.
+- **Legendary Pokémon**: Adds spawn conditions for legendary Pokémon. Can spawn in the Overworld and the Nether.
+- **Ultra Beasts**: Includes spawn conditions for Ultra Beasts. They spawn exclusively in The End dimension.
 - **Paradox Pokémon**: No spawn conditions currently. Easy to add; I have them commented out.
-- **Dynamic Conditions**: Spawning based on weather, time of day, and specific locations.
+- **Dynamic Spawn Conditions**: 
+  - Spawning based on current weather.
+  - Time of day (Dawn, Day, Exactly Noon, Afternoon, Dusk, Night, Exactly Midnight).
+  - Works with both Terralith and Vanilla biomes! 
+  - Special conditions (in water, in caves, or in the sky).
 - **Multi-Dimensional**: Spawns different legendaries in the overworld, end, and nether.
 - **Weather (Shiny) Boosts**: Boosts the shiny odds of the legendary depending on the weather. More information about this below.
 
@@ -31,21 +33,23 @@ Note: Cobblemon does not have a model for all legendaries yet! My brother used a
 
 ## Usage
 
+There is no config file. All changes must be made in the .java files and then you must rebuild the project. 
+
 - **Spawning Conditions**:
-  - **Weather**: Pokémon spawn based on weather conditions (Sunny, Rainy, Thunderstorm). 
+  - **Weather**: Pokémon can only spawn during provided weather conditions (Sunny, Rainy, Thunderstorm). 
     - **Weather Boosts**: Has functionality to provide a shiny boost depending on the weather. For example Raikou, Zapdos, Thundurus, Zekrom (and a few others) have a shiny boost during thunderstorms, Moltres has a shiny boost during sunny weather, and suicune has a shiny boost during the rain. These were just basic examples, see `SpawnConditions.java` for the full list.  
   - **Time of Day**: Different Pokémon spawn at different times of the day (Dawn, Day, Exactly Noon, Afternoon, Dusk, Night, Exactly Midnight). 
   - **Locations**: Specific Pokémon spawn in caves, water, or specific biomes. Has support for minY and maxY spawn locations. For example, Rayquaza can spawn at minY 140 (very tall mountains) up to the maxY of 320 (the skybox). 
 
 - **Commands**:
-  - **`/checkspawn legendary`**: Checks the chances of all possible legendaries around every player on the server. Also provides the time until the next spawn, and the current time of the world (DAY, AFTERNOON, DUSK, NIGHT, etc).
-  - **`/checkspawn here`**: Checks the chances of all possible legendaries around the user of the command. Also provides the time until the next spawn, and the current time of the world (DAY, AFTERNOON, DUSK, NIGHT, etc).
-  - **`/legendaryspawn here`**: OP required. Silently triggers a legendary spawn event on the user of the command.
-  - **`/legendaryspawn random`**: OP required. Triggers a legendary spawn event on a random player in the server. Makes an announcement. 
+  - `/checkspawn legendary`: Checks the chances of all possible legendaries around every player on the server. Also provides the time until the next spawn, and the current time of the world (DAY, AFTERNOON, DUSK, NIGHT, etc).
+  - `/checkspawn here`: Checks the chances of all possible legendaries around the user of the command. Also provides the time until the next spawn, and the current time of the world (DAY, AFTERNOON, DUSK, NIGHT, etc).
+  - `/legendaryspawn here`: OP required. Silently triggers a legendary spawn event on the user of the command.
+  - `/legendaryspawn random`: OP required. Triggers a legendary spawn event on a random player in the server. Makes an announcement. 
 
 ## Contributing
 
-This mod is unmaintained and was created as a personal project. However, contributions are welcome. This mod may have bugs. Feel free to fork the repository and submit pull requests.
+This mod is unmaintained and was created as a personal project. I originally made this mod for my brother, and do not plan on actively updating it. However, contributions are welcome. This mod may have bugs. Feel free to fork the repository and submit pull requests.
 
 ## Credits
 
