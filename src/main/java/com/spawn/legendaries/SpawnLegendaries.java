@@ -35,7 +35,7 @@ public class SpawnLegendaries implements ModInitializer {
 	public static final int BOOSTED_SHINY_CHANCE = 10; // 10%
 
 	public static final double MIN_SPAWN_TIMER_MINUTES = 12.5;	// 12.5 minutes
-	public static final double MAX_SPAWN_TIMER_MINUTES = 29.16;	// 29.16 minutes
+	public static final double MAX_SPAWN_TIMER_MINUTES = 25;	// 25 minutes
 	public static int MIN_SPAWN_TIMER_TICKS = (int) (MIN_SPAWN_TIMER_MINUTES * 60 * 20);
 	public static int MAX_SPAWN_TIMER_TICKS = (int) (MAX_SPAWN_TIMER_MINUTES * 60 * 20);
 	public static int SPAWN_TIMER = RANDOM.nextInt(MAX_SPAWN_TIMER_TICKS - MIN_SPAWN_TIMER_TICKS) + MIN_SPAWN_TIMER_TICKS;
@@ -150,7 +150,7 @@ public class SpawnLegendaries implements ModInitializer {
 	}
 
 	public boolean spawnOnSafeBlock(World world, BlockPos playerPos, String pokemonToSpawn, ServerPlayerEntity player) {
-		pokemonToSpawn = pokemonToSpawn.toLowerCase();
+
 		SpawnConditions.SpawnCondition spawnCondition = spawnConditionsClass.legendarySpawnConditions.get(pokemonToSpawn);
 		int searchRange = SPAWN_RADIUS;
 	
@@ -304,11 +304,11 @@ public class SpawnLegendaries implements ModInitializer {
     }
 
 	public boolean isPlayerInEnd(World world) {
-		return world.getRegistryKey().getValue().equals(new Identifier("minecraft:the_end"));
+		return world.getRegistryKey().getValue().equals(Identifier.of("minecraft:the_end"));
 	}
 	
 	public boolean isPlayerInNether(World world) {
-		return world.getRegistryKey().getValue().equals(new Identifier("minecraft:the_nether"));
+		return world.getRegistryKey().getValue().equals(Identifier.of("minecraft:the_nether"));
 	}
 
 	public void runCommand(ServerPlayerEntity player, String command) {

@@ -22,13 +22,13 @@ _Note: While Cobblemon runs on the Showdown engine and has support for the legen
 ## Installation
 
 1. **Requirements**:
-   - Minecraft Fabric version 1.20.1
+   - Minecraft Fabric versions 1.21.1 or 1.20.1
    - Cobblemon version 1.4.1+
 
 2. **Steps**:
-   - Download and install Minecraft Fabric version 1.20.1.
+   - Download and install the Minecraft Fabric that matches the release title.
    - Install Cobblemon version 1.4.1+.
-   - Download the "Spawn Legendaries" mod from the GitHub repository.
+   - Download the mod version you want from the GitHub [releases](https://github.com/wildwingBat/cobblemon-spawn-legendaries/releases) page.
    - Place the downloaded mod file into the `mods` folder of your Minecraft directory.
 
 ## Usage
@@ -40,6 +40,7 @@ There is no config file. All changes must be made in the .java files and then yo
     - **Weather Boosts**: Has functionality to provide a shiny boost depending on the weather. For example Raikou, Zapdos, Thundurus, Zekrom (and a few others) have a shiny boost during thunderstorms, Moltres has a shiny boost during sunny weather, and suicune has a shiny boost during the rain. These were just basic examples, see `SpawnConditions.java` for the full list.  
   - **Time of Day**: Different Pokémon spawn at different times of the day (Dawn, Day, Exactly Noon, Afternoon, Dusk, Night, Exactly Midnight). 
   - **Locations**: Specific Pokémon spawn in caves, water, or specific biomes. Has support for minY and maxY spawn locations. For example, Rayquaza can spawn at minY 140 (very tall mountains) up to the maxY of 320 (the skybox). 
+  - **All Legendaries**: For the full list of legendary Pokémon spawn conditions, [Click Here!](https://github.com/wildwingBat/cobblemon-spawn-legendaries/blob/1.1.0/src/main/java/com/spawn/legendaries/SpawnConditions.java).
 
 - **Commands**:
   - `/checkspawn legendary`: Checks the chances of all possible legendaries around every player on the server. Also provides the time until the next spawn, and the current time of the world (DAY, AFTERNOON, DUSK, NIGHT, etc).
@@ -54,7 +55,7 @@ This mod is unmaintained and was created as a personal project. I originally mad
 ## Credits
 
 - **Author**: wildwingBat
-- **Last Updated**: May 1st, 2024
+- **Last Updated**: February 27th, 2025
 - **Special Thanks**: To my brother, for whom this mod was created.
 
 ## Contact

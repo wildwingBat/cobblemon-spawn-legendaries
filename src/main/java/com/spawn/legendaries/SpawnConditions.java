@@ -14,12 +14,12 @@ import net.minecraft.world.biome.BiomeKeys;
 
 public class SpawnConditions {
 
-    //private final SpawnLegendaries sL;
+    //private final SpawnLegendaries sL; // Unused. References SpawnLegendaries class incase I need any methods or fields. 
 
     public Map<String, SpawnCondition> legendarySpawnConditions;
 
     public SpawnConditions(SpawnLegendaries spawnLegendaries){
-        //this.sL = spawnLegendaries;
+        //this.sL = spawnLegendaries; 
     }
 
     public enum TimeOfDay {
@@ -208,22 +208,22 @@ public class SpawnConditions {
 		// +---------------------------------------+
 		// Caves during the afternoons
 
-		Arrays.asList(
+		mewtwoCondition.biomes = Arrays.asList(
 			BiomeKeys.LUSH_CAVES,
 			BiomeKeys.DRIPSTONE_CAVES,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "cave/andesite_caves")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "cave/crystal_caves")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "cave/deep_caves")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "cave/desert_caves")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "cave/frostfire_caves")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "cave/fungal_caves")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "cave/granite_caves")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "cave/ice_caves")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "cave/infested_caves")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "cave/mantle_caves")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "cave/thermal_caves")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "cave/tuff_caves")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "cave/underground_jungle"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "cave/andesite_caves")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "cave/crystal_caves")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "cave/deep_caves")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "cave/desert_caves")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "cave/frostfire_caves")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "cave/fungal_caves")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "cave/granite_caves")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "cave/ice_caves")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "cave/infested_caves")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "cave/mantle_caves")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "cave/thermal_caves")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "cave/tuff_caves")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "cave/underground_jungle"))
 		);
 		mewtwoCondition.maxY = 256; //Caves generate at any altitude up to Y-level 256
 		mewtwoCondition.minY = -59; //and may span from the surface all the way to Y-level -59
@@ -258,14 +258,13 @@ public class SpawnConditions {
 		//                 HO-OH                                     
 		// +---------------------------------------+
 		hoohCondition.biomes = Arrays.asList(
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "skylands_autumn")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "skylands_summer"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "skylands_autumn"))
 		);
 		hoohCondition.maxY = 320; 
 		hoohCondition.minY = 150;
-		hoohCondition.timeOfDay = TimeOfDay.AFTERNOON;
+		hoohCondition.timeOfDay = TimeOfDay.DAY;
 		hoohCondition.weather = Weather.SUNNY;
-		hoohCondition.weatherBoost = null;
+		hoohCondition.weatherBoost = Weather.SUNNY;
 		hoohCondition.inCave = false;
 		hoohCondition.inWater = false;
 		legendarySpawnConditions.put("HoOh", hoohCondition);
@@ -280,8 +279,9 @@ public class SpawnConditions {
 			BiomeKeys.FROZEN_PEAKS,
 			BiomeKeys.JAGGED_PEAKS,
 			BiomeKeys.STONY_PEAKS,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "emerald_peaks")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "volcanic_peaks"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "emerald_peaks")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "volcanic_peaks")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "skylands_summer"))
 		);
 		rayquazaCondition.maxY = 320;
 		rayquazaCondition.minY = 140;
@@ -316,11 +316,11 @@ public class SpawnConditions {
 		
 		groudonCondition.biomes = Arrays.asList(
 			BiomeKeys.DESERT,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "desert_canyon")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "desert_oasis")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "desert_spires")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "lush_desert")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "sandstone_valley"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "desert_canyon")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "desert_oasis")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "desert_spires")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "lush_desert")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "sandstone_valley"))
 		);
 		groudonCondition.maxY = 150;
 		groudonCondition.minY = 0;
@@ -334,7 +334,7 @@ public class SpawnConditions {
 		//                 DIALGA                                     
 		// +---------------------------------------+
 		dialgaCondition.biomes = Arrays.asList(
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "emerald_peaks"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "emerald_peaks"))
 		);
 		dialgaCondition.maxY = 255;
 		dialgaCondition.minY = 65;
@@ -348,8 +348,8 @@ public class SpawnConditions {
 		//                 PALKIA                                     
 		// +---------------------------------------+
 		palkiaCondition.biomes = Arrays.asList(
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "moonlight_grove")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "moonlight_valley"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "moonlight_grove")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "moonlight_valley"))
 		);
 		palkiaCondition.maxY = 255;
 		palkiaCondition.minY = 60;
@@ -416,9 +416,9 @@ public class SpawnConditions {
 			BiomeKeys.SNOWY_BEACH,
 			BiomeKeys.ICE_SPIKES,
 			BiomeKeys.SNOWY_PLAINS,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "frozen_cliffs")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "glacial_chasm")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "skylands_winter"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "frozen_cliffs")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "glacial_chasm")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "skylands_winter"))
 		);
 		kyuremCondition.maxY = 300;
 		kyuremCondition.minY = 65;
@@ -479,10 +479,10 @@ public class SpawnConditions {
 		cosmogCondition.biomes = Arrays.asList(
 			BiomeKeys.FLOWER_FOREST,
 			BiomeKeys.SUNFLOWER_PLAINS,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "sakura_valley")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "moonlight_valley")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "moonlight_grove")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "cloud_forest"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "sakura_valley")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "moonlight_valley")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "moonlight_grove")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "cloud_forest"))
 		);
 		cosmogCondition.maxY = 255;
 		cosmogCondition.minY = 65;
@@ -512,7 +512,7 @@ public class SpawnConditions {
 		zacianCondition.biomes = Arrays.asList(
 			BiomeKeys.FOREST,
 			BiomeKeys.BIRCH_FOREST,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "white_cliffs"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "white_cliffs"))
 		);
 		zacianCondition.maxY = 255;
 		zacianCondition.minY = 60;
@@ -528,7 +528,7 @@ public class SpawnConditions {
 		zamazentaCondition.biomes = Arrays.asList(
 			BiomeKeys.FOREST,
 			BiomeKeys.BIRCH_FOREST,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "white_cliffs"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "white_cliffs"))
 		);
 		zamazentaCondition.maxY = 255;
 		zamazentaCondition.minY = 60;
@@ -544,7 +544,7 @@ public class SpawnConditions {
 		eternatusCondition.biomes = Arrays.asList(
 			BiomeKeys.SWAMP,
 			BiomeKeys.MANGROVE_SWAMP,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "orchid_swamp"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "orchid_swamp"))
 		);
 		eternatusCondition.maxY = 255;
 		eternatusCondition.minY = 62;
@@ -561,7 +561,7 @@ public class SpawnConditions {
 			BiomeKeys.SNOWY_PLAINS,
 			BiomeKeys.SNOWY_TAIGA,
 			BiomeKeys.SNOWY_SLOPES,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "snowy_shield"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "snowy_shield"))
 		);
 		calyrexCondition.maxY = 255;
 		calyrexCondition.minY = 62;
@@ -576,11 +576,11 @@ public class SpawnConditions {
 		// +---------------------------------------+
 		koraidonCondition.biomes = Arrays.asList(
 			BiomeKeys.WINDSWEPT_HILLS,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "highlands")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "arid_highlands")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "alpine_highlands")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "forested_highlands")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "temperate_highlands"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "highlands")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "arid_highlands")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "alpine_highlands")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "forested_highlands")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "temperate_highlands"))
 		);
 		koraidonCondition.maxY = 255;
 		koraidonCondition.minY = 60;
@@ -593,19 +593,25 @@ public class SpawnConditions {
 		// +---------------------------------------+
 		//                 MIRAIDON                               
 		// +---------------------------------------+
-		miraidonCondition.biomes = Arrays.asList(
-			BiomeKeys.TAIGA,
-			BiomeKeys.SNOWY_TAIGA,
-			BiomeKeys.PLAINS,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "siberian_taiga"))
-		);
+		try {
+            miraidonCondition.biomes = Arrays.asList(
+                BiomeKeys.TAIGA,
+                BiomeKeys.SNOWY_TAIGA,
+                BiomeKeys.PLAINS,
+                RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "siberian_taiga"))
+            );
+        } catch (Exception e) {
+            System.out.println("Error creating Identifier: " + e.getMessage());
+        }
 		miraidonCondition.maxY = 255;
 		miraidonCondition.minY = 60;
 		miraidonCondition.timeOfDay = null;
 		miraidonCondition.weather = Weather.SUNNY;
 		miraidonCondition.inCave = false;
 		miraidonCondition.inWater = false;
-		legendarySpawnConditions.put("Miraidon", miraidonCondition);
+		
+		// Insert into map with lowercase key
+        legendarySpawnConditions.put("Miraidon", miraidonCondition);
 
 
 		// MYTHICAL POKEMON
@@ -618,10 +624,10 @@ public class SpawnConditions {
 			BiomeKeys.JUNGLE,
 			BiomeKeys.SPARSE_JUNGLE,
 			BiomeKeys.BAMBOO_JUNGLE,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "tropical_jungle")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "jungle_mountains")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "rocky_jungle")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "amethyst_rainforest"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "tropical_jungle")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "jungle_mountains")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "rocky_jungle")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "amethyst_rainforest"))
 		);
 		mewCondition.maxY = 255;
 		mewCondition.minY = 60;
@@ -637,14 +643,14 @@ public class SpawnConditions {
 		celebiCondition.biomes = Arrays.asList(
 			BiomeKeys.FLOWER_FOREST,
 			BiomeKeys.MEADOW,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "blooming_plateau")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "blooming_valley")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "lavender_forest")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "lavender_valley")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "moonlight_grove")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "moonlight_valley")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "sakura_grove")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "sakura_valley"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "blooming_plateau")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "blooming_valley")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "lavender_forest")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "lavender_valley")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "moonlight_grove")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "moonlight_valley")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "sakura_grove")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "sakura_valley"))
 		);
 		celebiCondition.maxY = 255;
 		celebiCondition.minY = 30;
@@ -660,9 +666,9 @@ public class SpawnConditions {
 		jirachiCondition.biomes = Arrays.asList(
 			BiomeKeys.WINDSWEPT_HILLS,
 			BiomeKeys.WINDSWEPT_GRAVELLY_HILLS,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "granite_cliffs")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "granite_cliffs")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "white_cliffs"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "granite_cliffs")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "granite_cliffs")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "white_cliffs"))
 
 
 		);
@@ -681,8 +687,8 @@ public class SpawnConditions {
 			BiomeKeys.FROZEN_PEAKS,
 			BiomeKeys.JAGGED_PEAKS,
 			BiomeKeys.STONY_PEAKS,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "emerald_peaks")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "volcanic_peaks"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "emerald_peaks")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "volcanic_peaks"))
 		);
 		deoxysCondition.maxY = 320;
 		deoxysCondition.minY = 140;
@@ -732,9 +738,9 @@ public class SpawnConditions {
 		// +---------------------------------------+
 		darkraiCondition.biomes = Arrays.asList(
 			BiomeKeys.DARK_FOREST,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "moonlight_grove")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "moonlight_valley")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "mirage_isles"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "moonlight_grove")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "moonlight_valley")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "mirage_isles"))
 		);
 		darkraiCondition.maxY = 255;
 		darkraiCondition.minY = 62;
@@ -750,14 +756,14 @@ public class SpawnConditions {
 		shayminCondition.biomes = Arrays.asList(
 			BiomeKeys.FLOWER_FOREST,
 			BiomeKeys.MEADOW,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "blooming_plateau")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "blooming_valley")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "lavender_forest")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "lavender_valley")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "moonlight_grove")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "moonlight_valley")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "sakura_grove")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "sakura_valley"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "blooming_plateau")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "blooming_valley")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "lavender_forest")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "lavender_valley")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "moonlight_grove")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "moonlight_valley")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "sakura_grove")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "sakura_valley"))
 		);
 		shayminCondition.maxY = 255;
 		shayminCondition.minY = 30;
@@ -772,8 +778,8 @@ public class SpawnConditions {
 		// +---------------------------------------+
 		arceusCondition.biomes = Arrays.asList(
 			BiomeKeys.MEADOW,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "cloud_forest")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "emerald_peaks"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "cloud_forest")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "emerald_peaks"))
 		);
 		arceusCondition.maxY = 255;
 		arceusCondition.minY = 62;
@@ -789,9 +795,9 @@ public class SpawnConditions {
 		victiniCondition.biomes = Arrays.asList(
 			BiomeKeys.SAVANNA,
 			BiomeKeys.SAVANNA_PLATEAU,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "brushland")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "fractured_savanna")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "savanna_slopes"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "brushland")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "fractured_savanna")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "savanna_slopes"))
 		);
 		victiniCondition.maxY = 256;
 		victiniCondition.minY = 62;
@@ -806,7 +812,7 @@ public class SpawnConditions {
 		// +---------------------------------------+
 		keldeoCondition.biomes = Arrays.asList(
 			BiomeKeys.RIVER,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "warm_river"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "warm_river"))
 		);
 		keldeoCondition.maxY = 256;
 		keldeoCondition.minY = 0;
@@ -823,8 +829,8 @@ public class SpawnConditions {
 			BiomeKeys.FLOWER_FOREST,
 			BiomeKeys.MEADOW,
 			BiomeKeys.SUNFLOWER_PLAINS,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "blooming_plateau")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "blooming_valley"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "blooming_plateau")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "blooming_valley"))
 		);
 		meloettaCondition.maxY = 255;
 		meloettaCondition.minY = 0;
@@ -838,8 +844,8 @@ public class SpawnConditions {
 		//                 GENESECT                               
 		// +---------------------------------------+
 		genesectCondition.biomes = Arrays.asList(
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "rocky_jungle")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "rocky_mountains"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "rocky_jungle")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "rocky_mountains"))
 		);
 		genesectCondition.maxY = 255;
 		genesectCondition.minY = 62;
@@ -853,8 +859,8 @@ public class SpawnConditions {
 		//                 DIANCIE                                 
 		// +---------------------------------------+
 		diancieCondition.biomes = Arrays.asList(
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "amethyst_canyon")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "amethyst_rainforest"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "amethyst_canyon")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "amethyst_rainforest"))
 		);
 		diancieCondition.maxY = 255;
 		diancieCondition.minY = 0;
@@ -869,11 +875,11 @@ public class SpawnConditions {
 		// +---------------------------------------+
 		hoopaCondition.biomes = Arrays.asList(
 			BiomeKeys.DESERT,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "desert_canyon")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "desert_oasis")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "desert_spires")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "lush_desert")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "sandstone_valley"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "desert_canyon")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "desert_oasis")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "desert_spires")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "lush_desert")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "sandstone_valley"))
 		);
 		hoopaCondition.maxY = 255;
 		hoopaCondition.minY = 60;
@@ -888,10 +894,10 @@ public class SpawnConditions {
 		// +---------------------------------------+
 		volcanionCondition.biomes = Arrays.asList(
 			BiomeKeys.DESERT,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "desert_oasis")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "desert_spires")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "lush_desert")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "caldera"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "desert_oasis")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "desert_spires")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "lush_desert")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "caldera"))
 		);
 		volcanionCondition.maxY = 127;
 		volcanionCondition.minY = 0;
@@ -906,7 +912,7 @@ public class SpawnConditions {
 		// +---------------------------------------+
 		marshadowCondition.biomes = Arrays.asList(
 			BiomeKeys.DEEP_DARK,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "frostfire_caves"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "frostfire_caves"))
 		);
 		marshadowCondition.maxY = 50;
 		marshadowCondition.minY = -60;
@@ -920,10 +926,10 @@ public class SpawnConditions {
 		//                 MAGEARNA                              
 		// +---------------------------------------+
 		magearnaCondition.biomes = Arrays.asList(
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "blooming_valley")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "rocky_jungle")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "snowy_cherry_grove")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "sakura_valley"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "blooming_valley")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "rocky_jungle")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "snowy_cherry_grove")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "sakura_valley"))
 		);
 		magearnaCondition.maxY = 255;
 		magearnaCondition.minY = 64;
@@ -955,9 +961,9 @@ public class SpawnConditions {
 		// +---------------------------------------+
 		meltanCondition.biomes = Arrays.asList(
 			BiomeKeys.DRIPSTONE_CAVES,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "cave/mantle_caves")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "cave/thermal_caves")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "cave/tuff_caves"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "cave/mantle_caves")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "cave/thermal_caves")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "cave/tuff_caves"))
 		);
 		meltanCondition.maxY = 50;
 		meltanCondition.minY = -64;
@@ -972,9 +978,9 @@ public class SpawnConditions {
 		// +---------------------------------------+
 		melmetalCondition.biomes = Arrays.asList(
 			BiomeKeys.DRIPSTONE_CAVES,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "cave/mantle_caves")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "cave/thermal_caves")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "cave/tuff_caves"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "cave/mantle_caves")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "cave/thermal_caves")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "cave/tuff_caves"))
 		);
 		meltanCondition.maxY = 50;
 		meltanCondition.minY = -64;
@@ -989,8 +995,8 @@ public class SpawnConditions {
 		// +---------------------------------------+
 		zarudeCondition.biomes = Arrays.asList(
 			BiomeKeys.JUNGLE,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "jungle_mountains")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "rocky_jungle"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "jungle_mountains")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "rocky_jungle"))
 		);
 		zarudeCondition.maxY = 255;
 		zarudeCondition.minY = 60;
@@ -1009,10 +1015,10 @@ public class SpawnConditions {
 		// +---------------------------------------+
 		articunoCondition.biomes = Arrays.asList(
 			BiomeKeys.ICE_SPIKES,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "frozen_cliffs")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "glacial_chasm")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "ice_marsh")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "wintry_forest"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "frozen_cliffs")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "glacial_chasm")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "ice_marsh")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "wintry_forest"))
 		);
 		articunoCondition.maxY = 320;
 		articunoCondition.minY = 100;
@@ -1030,11 +1036,11 @@ public class SpawnConditions {
 			BiomeKeys.BADLANDS,
 			BiomeKeys.ERODED_BADLANDS,
 			BiomeKeys.WOODED_BADLANDS,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "bryce_canyon")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "painted_mountains")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "red_oasis")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "warped_mesa")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "white_mesa"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "bryce_canyon")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "painted_mountains")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "red_oasis")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "warped_mesa")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "white_mesa"))
 		);
 		moltresCondition.maxY = 320; //skybox
 		moltresCondition.minY = 100; //minimum Y for moltres to spawn
@@ -1051,10 +1057,10 @@ public class SpawnConditions {
 		zapdosCondition.biomes = Arrays.asList(
 			BiomeKeys.SAVANNA_PLATEAU,
 			BiomeKeys.WINDSWEPT_SAVANNA,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "savanna_badlands")) ,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "fractured_savanna")) ,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "red_oasis")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "savanna_slopes"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "savanna_badlands")) ,
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "fractured_savanna")) ,
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "red_oasis")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "savanna_slopes"))
 		);
 		zapdosCondition.maxY = 320;
 		zapdosCondition.minY = 100;
@@ -1071,13 +1077,13 @@ public class SpawnConditions {
 		raikouCondition.biomes = Arrays.asList(
 			BiomeKeys.SAVANNA,
 			BiomeKeys.SAVANNA_PLATEAU,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "savanna_badlands")) ,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "fractured_savanna")) ,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "red_oasis")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "savanna_slopes")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "arid_highlands")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "hot_shrubland")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "shrubland"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "savanna_badlands")) ,
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "fractured_savanna")) ,
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "red_oasis")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "savanna_slopes")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "arid_highlands")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "hot_shrubland")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "shrubland"))
 
 		);
 		raikouCondition.maxY = 255;
@@ -1095,9 +1101,9 @@ public class SpawnConditions {
 		enteiCondition.biomes = Arrays.asList(
 			BiomeKeys.WINDSWEPT_GRAVELLY_HILLS,
 			BiomeKeys.WINDSWEPT_HILLS,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "gravel_desert")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "mountain_steppe")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "steppe"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "gravel_desert")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "mountain_steppe")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "steppe"))
 		);
 		enteiCondition.maxY = 255;
 		enteiCondition.minY = 62;
@@ -1114,9 +1120,9 @@ public class SpawnConditions {
 			BiomeKeys.BEACH,
 			BiomeKeys.SNOWY_BEACH,
 			BiomeKeys.STONY_SHORE,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "ice_marsh")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "gravel_beach")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "caldera"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "ice_marsh")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "gravel_beach")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "caldera"))
 		);
 		suicuneCondition.maxY = 255;
 		suicuneCondition.minY = 60;
@@ -1133,7 +1139,7 @@ public class SpawnConditions {
 		regirockCondition.biomes = Arrays.asList(
 			BiomeKeys.DESERT,
 			BiomeKeys.BADLANDS,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "ancient_sands"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "ancient_sands"))
 		);
 		regirockCondition.maxY = 50;
 		regirockCondition.minY = -60;
@@ -1148,13 +1154,13 @@ public class SpawnConditions {
 		// +---------------------------------------+
 		regiceCondition.biomes = Arrays.asList(
 			BiomeKeys.SNOWY_PLAINS,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "wintry_lowlands")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "glacial_chasm")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "ice_marsh")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "snowy_shield")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "frozen_cliffs")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "snowy_badlands")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "wintry_forest"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "wintry_lowlands")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "glacial_chasm")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "ice_marsh")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "snowy_shield")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "frozen_cliffs")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "snowy_badlands")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "wintry_forest"))
 		);
 		regiceCondition.maxY = 50;
 		regiceCondition.minY = -60;
@@ -1169,8 +1175,8 @@ public class SpawnConditions {
 		// +---------------------------------------+
 		registeelCondition.biomes = Arrays.asList(
 			BiomeKeys.PLAINS,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "emerald_peaks")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "granite_cliffs"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "emerald_peaks")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "granite_cliffs"))
 		);
 		registeelCondition.maxY = 50;
 		registeelCondition.minY = -60;
@@ -1187,8 +1193,8 @@ public class SpawnConditions {
 			BiomeKeys.TAIGA,
 			BiomeKeys.OLD_GROWTH_PINE_TAIGA,
 			BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "basalt_cliffs")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "shield"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "basalt_cliffs")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "shield"))
 		);
 		regidragoCondition.maxY = 50;
 		regidragoCondition.minY = -60;
@@ -1203,9 +1209,9 @@ public class SpawnConditions {
 		// +---------------------------------------+
 		regielekiCondition.biomes = Arrays.asList(
 			BiomeKeys.SAVANNA,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "brushland")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "savanna_slopes")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "hot_shrubland"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "brushland")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "savanna_slopes")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "hot_shrubland"))
 		);
 		regielekiCondition.maxY = 50;
 		regielekiCondition.minY = -60;
@@ -1269,7 +1275,7 @@ public class SpawnConditions {
 		// +---------------------------------------+
 		uxieCondition.biomes = Arrays.asList(
 			BiomeKeys.BIRCH_FOREST,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "white_cliffs"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "white_cliffs"))
 		);
 		uxieCondition.maxY = 255;
 		uxieCondition.minY = 60;
@@ -1298,7 +1304,7 @@ public class SpawnConditions {
 		// +---------------------------------------+
 		azelfCondition.biomes = Arrays.asList(
 			BiomeKeys.FOREST,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "forested_highlands"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "forested_highlands"))
 		);
 		azelfCondition.maxY = 255;
 		azelfCondition.minY = 0;
@@ -1317,7 +1323,7 @@ public class SpawnConditions {
 			BiomeKeys.CRIMSON_FOREST,
 			BiomeKeys.SOUL_SAND_VALLEY,
 			BiomeKeys.BASALT_DELTAS,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "volcanic_crater"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "volcanic_crater"))
 		);
 		heatranCondition.maxY = 200;
 		heatranCondition.minY = 62;
@@ -1333,9 +1339,9 @@ public class SpawnConditions {
 		cresseliaCondition.biomes = Arrays.asList(
 			BiomeKeys.FLOWER_FOREST,
 			BiomeKeys.CHERRY_GROVE,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "sakura_grove")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "sakura_valley")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "sakura_grove"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "sakura_grove")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "sakura_valley")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "sakura_grove"))
 		);
 		cresseliaCondition.maxY = 255;
 		cresseliaCondition.minY = 64;
@@ -1354,10 +1360,10 @@ public class SpawnConditions {
 			BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA,
 			BiomeKeys.BIRCH_FOREST,
 			BiomeKeys.OLD_GROWTH_BIRCH_FOREST,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "forested_highlands")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "alpine_highlands")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "rocky_shrubland")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "bryce_canyon"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "forested_highlands")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "alpine_highlands")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "rocky_shrubland")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "bryce_canyon"))
 
 		);
 		cobalionCondition.maxY = 255;
@@ -1377,10 +1383,10 @@ public class SpawnConditions {
 			BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA,
 			BiomeKeys.BIRCH_FOREST,
 			BiomeKeys.OLD_GROWTH_BIRCH_FOREST,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "forested_highlands")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "alpine_highlands")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "rocky_shrubland")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "bryce_canyon"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "forested_highlands")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "alpine_highlands")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "rocky_shrubland")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "bryce_canyon"))
 		);
 		terrakionCondition.maxY = 255;
 		terrakionCondition.minY = -60;
@@ -1400,10 +1406,10 @@ public class SpawnConditions {
 			BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA,
 			BiomeKeys.BIRCH_FOREST,
 			BiomeKeys.OLD_GROWTH_BIRCH_FOREST,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "forested_highlands")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "alpine_highlands")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "rocky_shrubland")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "bryce_canyon"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "forested_highlands")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "alpine_highlands")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "rocky_shrubland")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "bryce_canyon"))
 		);
 		virizionCondition.maxY = 255;
 		virizionCondition.minY = 62;
@@ -1419,12 +1425,12 @@ public class SpawnConditions {
 		tornadusCondition.biomes = Arrays.asList(
 			BiomeKeys.WINDSWEPT_HILLS,
 			BiomeKeys.WINDSWEPT_GRAVELLY_HILLS,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "haze_mountain")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "cloud_forest")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "mountain_steppe")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "steppe")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "highlands")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "skylands_winter"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "haze_mountain")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "cloud_forest")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "mountain_steppe")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "steppe")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "highlands")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "skylands_winter"))
 		);
 		tornadusCondition.maxY = 320;
 		tornadusCondition.minY = 128; //cloud level
@@ -1441,12 +1447,12 @@ public class SpawnConditions {
 		thundurusCondition.biomes = Arrays.asList(
 			BiomeKeys.WINDSWEPT_SAVANNA,
 			BiomeKeys.WINDSWEPT_FOREST,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "hot_shrubland")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "cloud_forest")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "mountain_steppe")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "steppe")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "highlands")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "skylands_summer"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "hot_shrubland")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "cloud_forest")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "mountain_steppe")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "steppe")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "highlands")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "skylands_summer"))
 		);
 		tornadusCondition.maxY = 320;
 		tornadusCondition.minY = 128; //cloud level
@@ -1465,10 +1471,10 @@ public class SpawnConditions {
 			BiomeKeys.DESERT,
 			BiomeKeys.WOODED_BADLANDS,
 			BiomeKeys.ERODED_BADLANDS,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "ancient_sands")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "painted_mountains")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "cloud_forest")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "skylands_autumn"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "ancient_sands")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "painted_mountains")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "cloud_forest")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "skylands_autumn"))
 		);
 		tornadusCondition.maxY = 320;
 		tornadusCondition.minY = 128; //cloud level
@@ -1484,7 +1490,7 @@ public class SpawnConditions {
 		// +---------------------------------------+
 		typenullCondition.biomes = Arrays.asList(
 			BiomeKeys.SPARSE_JUNGLE,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "jungle_mountains"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "jungle_mountains"))
 		);
 		typenullCondition.maxY = 255;
 		typenullCondition.minY = 60;
@@ -1499,8 +1505,8 @@ public class SpawnConditions {
 		// +---------------------------------------+
 		tapukokoCondition.biomes = Arrays.asList(
 			BiomeKeys.SPARSE_JUNGLE,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "jungle_mountains")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "alpha_islands"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "jungle_mountains")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "alpha_islands"))
 		);
 		tapukokoCondition.maxY = 255;
 		tapukokoCondition.minY = 60;
@@ -1515,8 +1521,8 @@ public class SpawnConditions {
 		// +---------------------------------------+
 		tapuleleCondition.biomes = Arrays.asList(
 			BiomeKeys.BAMBOO_JUNGLE,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "amethyst_rainforest")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "alpha_islands"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "amethyst_rainforest")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "alpha_islands"))
 
 		);
 		tapuleleCondition.maxY = 255;
@@ -1532,8 +1538,8 @@ public class SpawnConditions {
 		// +---------------------------------------+
 		tapubuluCondition.biomes = Arrays.asList(
 			BiomeKeys.JUNGLE,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "tropical_jungle")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "alpha_islands"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "tropical_jungle")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "alpha_islands"))
 		);
 		tapubuluCondition.maxY = 255;
 		tapubuluCondition.minY = 60;
@@ -1548,9 +1554,9 @@ public class SpawnConditions {
 		// +---------------------------------------+
 		tapufiniCondition.biomes = Arrays.asList(
 			BiomeKeys.BEACH,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "blooming_plateau")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "blooming_valley")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "alpha_islands"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "blooming_plateau")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "blooming_valley")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "alpha_islands"))
 		);
 		tapufiniCondition.maxY = 255;
 		tapufiniCondition.minY = 60;
@@ -1594,7 +1600,7 @@ public class SpawnConditions {
 		glastrierCondition.biomes = Arrays.asList(
 			BiomeKeys.SNOWY_PLAINS,
 			BiomeKeys.SNOWY_SLOPES,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "wintry_lowlands"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "wintry_lowlands"))
 		);
 		glastrierCondition.maxY = 255;
 		glastrierCondition.minY = 60;
@@ -1609,7 +1615,7 @@ public class SpawnConditions {
 		// +---------------------------------------+
 		spectrierCondition.biomes = Arrays.asList(
 			BiomeKeys.SOUL_SAND_VALLEY,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "cave/frostfire_caves"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "cave/frostfire_caves"))
 		);
 		spectrierCondition.maxY = 255;
 		spectrierCondition.minY = 0;
@@ -1626,10 +1632,10 @@ public class SpawnConditions {
 			BiomeKeys.MUSHROOM_FIELDS,
 			BiomeKeys.SUNFLOWER_PLAINS,
 			BiomeKeys.CHERRY_GROVE,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "sakura_valley")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "sakura_grove")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "mirage_isles")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "skylands_spring"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "sakura_valley")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "sakura_grove")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "mirage_isles")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "skylands_spring"))
 		);
 		enamorusCondition.maxY = 255;
 		enamorusCondition.minY = 0;
@@ -1646,8 +1652,8 @@ public class SpawnConditions {
 			BiomeKeys.TAIGA,
 			BiomeKeys.OLD_GROWTH_PINE_TAIGA,
 			BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "rocky_mountains")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "rocky_shrubland"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "rocky_mountains")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "rocky_shrubland"))
 		);
 		tingluCondition.maxY = 255;
 		tingluCondition.minY = 60;
@@ -1665,13 +1671,13 @@ public class SpawnConditions {
 			BiomeKeys.SNOWY_SLOPES,
 			BiomeKeys.FROZEN_PEAKS,
 			BiomeKeys.JAGGED_PEAKS,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "alpine_grove")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "siberian_grove")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "siberian_taiga")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "wintry_forest")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "snowy_shield")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "snowy_maple_forest")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "frozen_cliffs"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "alpine_grove")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "siberian_grove")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "siberian_taiga")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "wintry_forest")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "snowy_shield")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "snowy_maple_forest")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "frozen_cliffs"))
 		);
 		chienpaoCondition.maxY = 255;
 		chienpaoCondition.minY = 60;
@@ -1688,7 +1694,7 @@ public class SpawnConditions {
 		wochienCondition.biomes = Arrays.asList(
 			BiomeKeys.MANGROVE_SWAMP,
 			BiomeKeys.SWAMP,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "orchid_swamp"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "orchid_swamp"))
 		);
 		wochienCondition.maxY = 255;
 		wochienCondition.minY = 0;
@@ -1705,8 +1711,8 @@ public class SpawnConditions {
 		chiyuCondition.biomes = Arrays.asList(
 			BiomeKeys.NETHER_WASTES,
 			BiomeKeys.BASALT_DELTAS,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "volcanic_crater")),
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "caldera"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "volcanic_crater")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "caldera"))
 		);
 		chiyuCondition.maxY = 255;
 		chiyuCondition.minY = 0;
@@ -1723,7 +1729,7 @@ public class SpawnConditions {
 		ogerponCondition.biomes = Arrays.asList(
 			BiomeKeys.SWAMP,
 			BiomeKeys.MANGROVE_SWAMP,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "orchid_swamp"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "orchid_swamp"))
 		);
 		ogerponCondition.maxY = 255;
 		ogerponCondition.minY = 60;
@@ -1739,7 +1745,7 @@ public class SpawnConditions {
 		munkidoriCondition.biomes = Arrays.asList(
 			BiomeKeys.SWAMP,
 			BiomeKeys.MANGROVE_SWAMP,
-			RegistryKey.of(RegistryKeys.BIOME, new Identifier("terralith", "orchid_swamp"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "orchid_swamp"))
 		);
 		munkidoriCondition.maxY = 255;
 		munkidoriCondition.minY = 60;
