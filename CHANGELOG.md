@@ -23,3 +23,8 @@
 - Zekrom now spawns in Terralith Yosemite Lowlands and Yosemite Cliffs
 - Regigigas now spawns in Terralith Fungal Caves
 - Registeel now spawns in Terralith Deep Caves and Infested Caves
+
+## [Version 1.1.2] - 2025-03-02
+
+### Bug fixes
+- Fixed a weather boost logic error that prevented non-shiny legendaries from spawning
