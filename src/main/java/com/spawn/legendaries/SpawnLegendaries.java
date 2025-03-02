@@ -30,12 +30,12 @@ public class SpawnLegendaries implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger("spawn-legendaries");
     public static final Random RANDOM = new Random();
 	public static final int SPAWN_RADIUS = 24;
-	public static final int SPAWN_CHANCE = 35; 		   // 35%
+	public static final int SPAWN_CHANCE = 40; 		   // 40%
 	public static final int SHINY_CHANCE = 5; 		   // 5%
 	public static final int BOOSTED_SHINY_CHANCE = 10; // 10%
 
 	public static final double MIN_SPAWN_TIMER_MINUTES = 12.5;	// 12.5 minutes
-	public static final double MAX_SPAWN_TIMER_MINUTES = 25;	// 25 minutes
+	public static final double MAX_SPAWN_TIMER_MINUTES = 18.5;	// 18.5 minutes
 	public static int MIN_SPAWN_TIMER_TICKS = (int) (MIN_SPAWN_TIMER_MINUTES * 60 * 20);
 	public static int MAX_SPAWN_TIMER_TICKS = (int) (MAX_SPAWN_TIMER_MINUTES * 60 * 20);
 	public static int SPAWN_TIMER = RANDOM.nextInt(MAX_SPAWN_TIMER_TICKS - MIN_SPAWN_TIMER_TICKS) + MIN_SPAWN_TIMER_TICKS;

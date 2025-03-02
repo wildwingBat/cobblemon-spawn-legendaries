@@ -369,8 +369,8 @@ public class SpawnConditions {
 			BiomeKeys.SOUL_SAND_VALLEY,
 			BiomeKeys.BASALT_DELTAS
 		);
-		giratinaCondition.maxY = 255;
-		giratinaCondition.minY = 60;
+		giratinaCondition.maxY = 100;
+		giratinaCondition.minY = 40;
 		giratinaCondition.timeOfDay = TimeOfDay.NIGHT;
 		giratinaCondition.weather = null;
 		giratinaCondition.inCave = false;
@@ -382,7 +382,8 @@ public class SpawnConditions {
 		// +---------------------------------------+
 		reshiramCondition.biomes = Arrays.asList(
 			BiomeKeys.OLD_GROWTH_PINE_TAIGA,
-			BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA
+			BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA,
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "volcanic_peaks"))
 		);
 		reshiramCondition.maxY = 255;
 		reshiramCondition.minY = 62;
@@ -397,7 +398,9 @@ public class SpawnConditions {
 		// +---------------------------------------+
 		zekromCondition.biomes = Arrays.asList(
 			BiomeKeys.OLD_GROWTH_PINE_TAIGA,
-			BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA
+			BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA,
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "yosemite_lowlands")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "yosemite_cliffs"))
 		);
 		zekromCondition.maxY = 255;
 		zekromCondition.minY = 62;
@@ -897,7 +900,8 @@ public class SpawnConditions {
 			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "desert_oasis")),
 			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "desert_spires")),
 			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "lush_desert")),
-			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "caldera"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "caldera")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "volcanic_peaks"))
 		);
 		volcanionCondition.maxY = 127;
 		volcanionCondition.minY = 0;
@@ -1176,7 +1180,9 @@ public class SpawnConditions {
 		registeelCondition.biomes = Arrays.asList(
 			BiomeKeys.PLAINS,
 			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "emerald_peaks")),
-			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "granite_cliffs"))
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "granite_cliffs")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "cave/deep_caves")),
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "cave/infested_caves"))
 		);
 		registeelCondition.maxY = 50;
 		registeelCondition.minY = -60;
@@ -1228,7 +1234,8 @@ public class SpawnConditions {
 			BiomeKeys.FOREST,
 			BiomeKeys.FLOWER_FOREST,
 			BiomeKeys.BIRCH_FOREST,
-			BiomeKeys.WINDSWEPT_FOREST
+			BiomeKeys.WINDSWEPT_FOREST,
+			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "cave/fungal_caves"))
 		);
 		regigigasCondition.maxY = 20;
 		regigigasCondition.minY = -60;
@@ -1325,9 +1332,9 @@ public class SpawnConditions {
 			BiomeKeys.BASALT_DELTAS,
 			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "volcanic_crater"))
 		);
-		heatranCondition.maxY = 200;
-		heatranCondition.minY = 62;
-		heatranCondition.timeOfDay = TimeOfDay.DAY;
+		heatranCondition.maxY = 100;
+		heatranCondition.minY = 40;
+		heatranCondition.timeOfDay = null;
 		heatranCondition.weather = null;
 		heatranCondition.inCave = false;
 		heatranCondition.inWater = false;
@@ -1714,8 +1721,8 @@ public class SpawnConditions {
 			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "volcanic_crater")),
 			RegistryKey.of(RegistryKeys.BIOME, Identifier.of("terralith", "caldera"))
 		);
-		chiyuCondition.maxY = 255;
-		chiyuCondition.minY = 0;
+		chiyuCondition.maxY = 100;
+		chiyuCondition.minY = 40;
 		chiyuCondition.timeOfDay = TimeOfDay.AFTERNOON;
 		chiyuCondition.weather = null;
 		chiyuCondition.inCave = false;
