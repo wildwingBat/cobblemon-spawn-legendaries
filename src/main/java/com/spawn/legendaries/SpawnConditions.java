@@ -286,7 +286,7 @@ public class SpawnConditions {
 		rayquazaCondition.maxY = 320;
 		rayquazaCondition.minY = 140;
 		rayquazaCondition.timeOfDay = TimeOfDay.AFTERNOON;
-		rayquazaCondition.weather = Weather.SUNNY;
+		rayquazaCondition.weather = null;
 		rayquazaCondition.inCave = false;
 		legendarySpawnConditions.put("Rayquaza", rayquazaCondition);
 

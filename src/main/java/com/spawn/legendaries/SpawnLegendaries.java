@@ -200,11 +200,9 @@ public class SpawnLegendaries implements ModInitializer {
 										spawnedOnBlock = spawnPos;
 										String spawnCommand = String.format("pokespawnat %d %d %d %s level=70", spawnPos.getX(), spawnPos.getY(), spawnPos.getZ(), pokemonToSpawn);
 										String shinySpawnCommand = String.format("pokespawnat %d %d %d %s shiny level=70", spawnPos.getX(), spawnPos.getY(), spawnPos.getZ(), pokemonToSpawn);
-										if (shinyWeatherBoost) {
-											if (RANDOM.nextInt(100) <= BOOSTED_SHINY_CHANCE) { // 1/10 chance to be shiny (BOOSTED)
-												runCommand(player, shinySpawnCommand);
-												spawnedAsShiny = true;
-											}
+										if (shinyWeatherBoost && RANDOM.nextInt(100) <= BOOSTED_SHINY_CHANCE) { // 1/10 chance to be shiny (BOOSTED)
+											runCommand(player, shinySpawnCommand);
+											spawnedAsShiny = true;
 										} else if (RANDOM.nextInt(100) <= SHINY_CHANCE) { // 1/20 chance to be shiny (DEFAULT)
 											runCommand(player, shinySpawnCommand);
 											spawnedAsShiny = true;
