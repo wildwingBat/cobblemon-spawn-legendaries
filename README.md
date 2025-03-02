@@ -40,7 +40,7 @@ There is no config file. All changes must be made in the .java files and then yo
     - **Weather Boosts**: Has functionality to provide a shiny boost depending on the weather. For example Raikou, Zapdos, Thundurus, Zekrom (and a few others) have a shiny boost during thunderstorms, Moltres has a shiny boost during sunny weather, and suicune has a shiny boost during the rain. These were just basic examples, see `SpawnConditions.java` for the full list.  
   - **Time of Day**: Different Pokémon spawn at different times of the day (Dawn, Day, Exactly Noon, Afternoon, Dusk, Night, Exactly Midnight). 
   - **Locations**: Specific Pokémon spawn in caves, water, or specific biomes. Has support for minY and maxY spawn locations. For example, Rayquaza can spawn at minY 140 (very tall mountains) up to the maxY of 320 (the skybox). 
-  - **All Legendaries**: For the full list of legendary Pokémon spawn conditions, [Click Here!](https://github.com/wildwingBat/cobblemon-spawn-legendaries/blob/1.1.1/src/main/java/com/spawn/legendaries/SpawnConditions.java).
+  - **All Legendaries**: For the full list of legendary Pokémon spawn conditions, [Click Here!](https://github.com/wildwingBat/cobblemon-spawn-legendaries/blob/main/src/main/java/com/spawn/legendaries/SpawnConditions.java).
 
 - **Commands**:
   - `/checkspawn legendary`: Checks the chances of all possible legendaries around every player on the server. Also provides the time until the next spawn, and the current time of the world (DAY, AFTERNOON, DUSK, NIGHT, etc).
